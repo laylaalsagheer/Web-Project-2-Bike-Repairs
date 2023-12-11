@@ -1,0 +1,226 @@
+html{
+    /* height: 100%; //to make the page full screen, without it the page will be small since the content was little before */
+    background-image: linear-gradient(#FA4083, #FC5E55);
+
+}
+body{
+    background-image: url(images/image-lion-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.container{
+    width: 1024px;
+    min-height: 300px ;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray; /* to make line between header and main / Solid can be replaced with dotted or another styled */
+}
+
+main{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.main2{
+    min-height: 300px;
+    padding-top: 50px;
+}
+.cards{
+    /* min-height: 300px; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.card1{
+    background-image: url(images/image-background-card1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.228); /* to make shadow behind the image*/    
+}
+.card2{
+    background-image: url(images/image-background-card2.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.228); /* to make shadow behind the image*/
+}
+.card3{
+    background-image: url(images/image-background-card3.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.228); /* to make shadow behind the image*/
+}
+
+.card1, .card2, .card3{ /*the affect will apply on all cards */
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box;
+}
+.herobox1{
+    flex: 2;
+}
+.herobox2{
+    flex: 1;
+}
+h1{
+    /* font-size: 80px; */
+    font-size: 3.25rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.9); /* to make shadow behind the text*/
+
+}
+h2{
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    /* text-align: center; */
+    margin-top: 20px;
+}
+p{
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.cards p{
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    margin: 10px 30px 20px 30px;
+    /* text-align: center; */
+    /* margin: 10px 30px 20px 30px; top right bottom left */
+    /* margin: 20px 30px; 20top/bottom 30right/left */
+}
+
+.cards i{
+    font-size: 100px;
+    /* color: #FA4083; */
+    /* padding-top: 30px; */
+}
+
+/* .cards a{ we removed it here because we have "a" in above which will make same effect
+    color: white;
+    text-decoration: none;
+} */
+
+.mybutton{
+    background-color: white;
+    color: #FA4083;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    border-radius: 7px;
+    /* border-radius: 12px 30px; To round the button shape */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.228); /* to make shadow behind the button*/
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+    /*TO change the button color when hover it with specific duration*/
+    .mybutton:hover {
+        background-color: rgba(29, 213, 103);
+        transition-duration: 1ms;
+    }
+
+a.mybutton{ /* To connect them, I shouldn't add space between them because mybutton is a class inside tag <a>*/
+    display: inline-block;
+    margin-top: 20px;
+}
+.herobox2 img{
+    border-radius: 20px 0px;
+    /* border-radius: 12px 30px 12px 30px; */
+}
+.navbutton{
+border: 1px solid white; /*SOlid can be replaced with anothere style like dot*/
+padding: 11px 25px;
+font-family: 'Playfair Display', serif;
+display: inline-block; /*to make items in the same line*/
+position: relative; /*to make the list related to the parent item*/
+}
+
+.testimonials{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.tbox{
+    width: 47%;
+    padding: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 50px;
+
+}
+/* .tbox : :last-child{
+    font-size: 0.8rem;
+}} */
+
+.tbox p:last-of-type{
+    font-size: 0.8rem;
+    padding-left: 30px;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    text-align: center;
+}
+.navbutton:hover .dropdown{
+    display: block;
+}
+.dropdown .navbutton{
+    width: 120px;
+    background-color: white;
+}
+.dropdown .navbutton a{
+    color: #FA4083;
+}
+.inputwrapper{
+    margin-bottom: 20px;
+
+}
+input[type=text], input[type=email], textarea{
+    padding: 10px 20px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.newline{
+    display: block;
+    margin-bottom: 10px;
+}
+.margin-right-a{
+    margin-right: 20px;
+}
+input[type=radio]{
+    margin-right: 10px;
+}
+
+form{
+    margin: 40px 0px;
+}
